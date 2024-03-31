@@ -13,7 +13,7 @@ with st.sidebar:
         options=['Home','Prediction'],
         icons=['house','book','envelope'],
         styles={
-            "container":{"background-color":"#f67704"},
+            "container":{"background-color":"FFB5DA"},
             "nav-link":{
                 "font-size":"21px",
                 "--hover-color":"#facf7d",
