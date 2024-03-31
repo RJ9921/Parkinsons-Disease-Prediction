@@ -125,7 +125,7 @@ if selected=='Prediction':
     
     
         #creating a button for prediction 
-        if st.button('Bank Campaign Result'):
+        if st.button('Prediction Result'):
             prediction = parkinson_prediction([PPE,MDVP_APQ,spread2,MDVP_Fhi_Hz,MDVP_Fo_Hz,Shimmer_APQ_5,Jitter_DDP,RPDE])
             st.success(prediction)
         
