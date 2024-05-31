@@ -10,8 +10,8 @@ import numpy as np
 with st.sidebar:
     selected=option_menu(
     menu_title="Main Menu",
-        options=['Home','Prediction'],
-        icons=['house','book','envelope'],
+        options=['Home','Prediction','Settings','About Us'],
+        icons=['house','book','gear','envelope'],
         styles={
             "container":{"background-color":"#FFB5DA"},
             "nav-link":{
@@ -128,8 +128,22 @@ if selected=='Prediction':
         if st.button('Prediction Result'):
             prediction = parkinson_prediction([PPE,MDVP_APQ,spread2,MDVP_Fhi_Hz,MDVP_Fo_Hz,Shimmer_APQ_5,Jitter_DDP,RPDE])
             st.success(prediction)
-        
+    
 
     
     if __name__ =='__main__':
         main()
+
+if selected=='Settings':
+    st.subheader('To Run This Project you need the Streamlit Environment and Required Libraries')
+    st.subheader('Open Streamlit CMD and Type Command "streamlit run app.py"')
+    st.subheader('A web application will get open in the default browser')
+
+if selected=='About Us':
+
+
+    st.markdown("""
+<div style="text-align: justify;">
+Parkinson's disease prediction using machine learning involves analyzing medical data to identify patterns indicative of the disease, enabling early and accurate diagnosis. Key features include motor and non-motor symptoms, with data sourced from voice recordings, handwriting samples, and clinical assessments. Machine learning algorithms like Support Vector Machines, Random Forests, and Neural Networks are employed, with feature selection techniques enhancing model performance. The models are evaluated using metrics such as accuracy, precision, recall, and AUC-ROC. Early detection facilitated by these models can lead to timely interventions and personalized treatment plans, improving patient outcomes. Challenges include ensuring data quality, model generalization, and addressing ethical considerations like patient privacy and data security.
+</div>
+""", unsafe_allow_html=True)
